@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, type ReactNode } from "react"
-import LocomotiveScroll from "locomotive-scroll"
 import "locomotive-scroll/dist/locomotive-scroll.css"
 
 interface SmoothScrollProviderProps {
@@ -13,23 +12,30 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
   const locomotiveScrollRef = useRef<any>(null)
 
   useEffect(() => {
-    if (!containerRef.current) return
+    let LocomotiveScroll: any
 
-    // Initialize Locomotive Scroll
-    locomotiveScrollRef.current = new LocomotiveScroll({
-      el: containerRef.current,
-      smooth: true,
-      smartphone: {
-        smooth: true,
-      },
-      tablet: {
-        smooth: true,
-      },
-      lerp: 0.07, // Linear interpolation, adjust for smoother/slower scrolling
-      multiplier: 1.0, // Scroll speed multiplier
-    })
+    const initScroll = async () => {
+      const module = await import("locomotive-scroll")
+      LocomotiveScroll = module.default
 
-    // Clean up
+      if (containerRef.current) {
+        locomotiveScrollRef.current = new LocomotiveScroll({
+          el: containerRef.current,
+          smooth: true,
+          smartphone: {
+            smooth: true,
+          },
+          tablet: {
+            smooth: true,
+          },
+          lerp: 0.07,
+          multiplier: 1.0,
+        })
+      }
+    }
+
+    initScroll()
+
     return () => {
       locomotiveScrollRef.current?.destroy()
     }
