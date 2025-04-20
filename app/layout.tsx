@@ -9,8 +9,8 @@ import { SmoothScrollProvider } from "@/components/smooth-scroll-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Planted - Indoor Plants for Every Space",
-  description: "Discover beautiful indoor plants for your home or office.",
+  title: "New Pack",
+  description: "Discover beautiful Pizza Boxes for your Shop.",
     generator: 'v0.dev'
 }
 
