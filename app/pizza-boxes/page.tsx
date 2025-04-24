@@ -13,48 +13,64 @@ const allProducts = [
     name: "Standard Pizza Box",
     price: 0.99,
     brand: "New Pack",
-    category: "standard",
-    image: "/placeholder.svg?height=400&width=400",
+    category: "pizza-boxes",
+    image: "/Pizza_Box_Mockup_1.jpg?height=400&width=400",
   },
   {
     id: 2,
     name: "Premium Pizza Box",
     price: 1.5,
     brand: "New Pack",
-    category: "premium",
-    image: "/placeholder.svg?height=400&width=400",
+    category: "pizza-boxes",
+    image: "/Pizza_Box_Mockup_2.jpg?height=400&width=400",
   },
   {
     id: 3,
-    name: "Eco-Friendly Pizza Box",
-    price: 1.25,
+    name: "Pizza Box Divider",
+    price: 0.25,
     brand: "New Pack",
-    category: "eco",
-    image: "/placeholder.svg?height=400&width=400",
+    category: "accessories",
+    image: "/Pizza_Box_Mockup_3.jpg?height=400&width=400",
   },
   {
     id: 4,
-    name: "Custom Printed Box",
-    price: 1.75,
+    name: "Napkins Bundle",
+    price: 3.99,
     brand: "New Pack",
-    category: "custom",
-    image: "/placeholder.svg?height=400&width=400",
+    category: "accessories",
+    image: "/Pizza_Box_Mockup_4.jpg?height=400&width=400",
   },
   {
     id: 5,
     name: "Pizza Box Bundle",
     price: 89.99,
     brand: "New Pack",
-    category: "bundle",
-    image: "/placeholder.svg?height=400&width=400",
+    category: "pizza-boxes",
+    image: "/Pizza_Box_Mockup_5.jpg?height=400&width=400",
   },
   {
     id: 6,
-    name: '10" Pizza Box',
-    price: 0.85,
+    name: "Custom Printed Box",
+    price: 1.75,
     brand: "New Pack",
-    category: "standard",
-    image: "/placeholder.svg?height=400&width=400",
+    category: "pizza-boxes",
+    image: "/Pizza_Box_Mockup_1.jpg?height=400&width=400",
+  },
+  {
+    id: 7,
+    name: "Eco-Friendly Pizza Box",
+    price: 1.25,
+    brand: "New Pack",
+    category: "pizza-boxes",
+    image: "/Pizza_Box_Mockup_1.jpg?height=400&width=400",
+  },
+  {
+    id: 8,
+    name: "Insulated Delivery Bag",
+    price: 24.99,
+    brand: "New Pack",
+    category: "accessories",
+    image: "/Pizza_Box_Mockup_1.jpg?height=400&width=400",
   },
 ]
 
@@ -128,13 +144,13 @@ export default function PizzaBoxesPage() {
         {/* Filters and Sort */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div className="flex items-center gap-2">
-            <button
+            {/* <button
               className="flex items-center gap-2 border rounded-full px-4 py-2 hover:bg-gray-50 transition-colors"
               onClick={() => document.getElementById("filter-sidebar")?.classList.remove("translate-x-full")}
             >
               <Filter className="w-4 h-4" />
               <span>Filter</span>
-            </button>
+            </button> */}
             <div className="hidden md:flex items-center gap-2">
               <button
                 className={`border rounded-full px-4 py-2 hover:bg-gray-50 transition-colors ${

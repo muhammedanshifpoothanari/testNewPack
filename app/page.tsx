@@ -14,7 +14,6 @@ export default function Home() {
   const [email, setEmail] = useState("")
   const { toast } = useToast()
 
-  // Hero slider data
   const heroSlides = [
     {
       image: "/images/banner1.png?height=500&width=1200",
@@ -23,13 +22,13 @@ export default function Home() {
         "Explore our range of pizza boxes designed to keep your pizzas hot, fresh, and protected during delivery.",
     },
     {
-      image: "/placeholder.svg?height=500&width=1200",
+      image: "/images/banner2.png?height=500&width=1200",
       title: "Custom printing solutions",
       description:
         "Stand out from the competition with our custom printed pizza boxes. Perfect for branding your business.",
     },
     {
-      image: "/placeholder.svg?height=500&width=1200",
+      image: "/Pizza_Box_Mockup_1.jpg?height=500&width=1200",
       title: "Eco-friendly options",
       description: "Sustainable packaging solutions that are good for your business and better for the environment.",
     },
@@ -67,22 +66,22 @@ export default function Home() {
 
   // Featured products data
   const featuredProducts = [
-    { id: 1, name: "Pizza Box Bundle", price: 89.99, image: "/placeholder.svg?height=400&width=400" },
+    { id: 1, name: "Pizza Box Bundle", price: 89.99, image: "/Pizza_Box_Mockup_1.jpg?height=400&width=400" },
     {
       id: 2,
       name: "Premium Pizza Box",
       price: 1.5,
       brand: "New Pack",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Pizza_Box_Mockup_2.jpg?height=400&width=400",
     },
     {
       id: 3,
       name: "Eco-Friendly Pizza Box",
       price: 1.25,
       brand: "New Pack",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Pizza_Box_Mockup_3.jpg?height=400&width=400",
     },
-    { id: 4, name: "Custom Printed Box", price: 1.75, image: "/placeholder.svg?height=400&width=400" },
+    { id: 4, name: "Custom Printed Box", price: 1.75, image: "/Pizza_Box_Mockup_4.jpg?height=400&width=400" },
   ]
 
   // New arrivals data
@@ -92,30 +91,30 @@ export default function Home() {
       name: "Standard Pizza Box",
       price: 0.99,
       brand: "New Pack",
-      image: "/placeholder.svg?height=280&width=280",
+      image: "/Pizza_Box_Mockup_5.jpg?height=280&width=280",
     },
     {
       id: 2,
       name: "Pizza Box Divider",
       price: 0.25,
       brand: "New Pack",
-      image: "/placeholder.svg?height=280&width=280",
+      image: "/Pizza_Box_Mockup_4.jpg?height=280&width=280",
     },
-    { id: 3, name: "Premium Pizza Box", price: 1.5, brand: "New Pack", image: "/placeholder.svg?height=280&width=280" },
+    { id: 3, name: "Premium Pizza Box", price: 1.5, brand: "New Pack", image: "/Pizza_Box_Mockup_3.jpg?height=280&width=280" },
     {
       id: 4,
       name: "Insulated Delivery Bag",
       price: 24.99,
       brand: "New Pack",
-      image: "/placeholder.svg?height=280&width=280",
+      image: "/Pizza_Box_Mockup_2.jpg?height=280&width=280",
     },
-    { id: 5, name: "Napkins Bundle", price: 3.99, brand: "New Pack", image: "/placeholder.svg?height=280&width=280" },
+    { id: 5, name: "Napkins Bundle", price: 3.99, brand: "New Pack", image: "/Pizza_Box_Mockup_1.jpg?height=280&width=280" },
     {
       id: 6,
       name: "Custom Printed Box",
       price: 1.75,
       brand: "New Pack",
-      image: "/placeholder.svg?height=280&width=280",
+      image: "/Pizza_Box_Mockup_4.jpg?height=280&width=280",
     },
   ]
 
@@ -132,7 +131,7 @@ export default function Home() {
           >
             <div className="absolute inset-0">
               <Image
-                src={slide.image || "/placeholder.svg"}
+                src={slide.image || "/Pizza_Box_Mockup_1.jpg"}
                 alt={slide.title}
                 fill
                 className="object-cover"
@@ -194,7 +193,7 @@ export default function Home() {
               Our most popular pizza packaging solutions. Perfect for pizzerias of all sizes.
             </p>
             <Link
-              href="/collections/featured"
+              href="/shop"
               className="inline-block mt-4 bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all"
             >
               View more
@@ -210,7 +209,7 @@ export default function Home() {
               >
                 <div className="aspect-square overflow-hidden bg-[#f5f2ed] rounded-lg mb-3">
                   <Image
-                    src={product.image || "/placeholder.svg"}
+                    src={product.image || "/Pizza_Box_Mockup_1.jpg"}
                     alt={product.name}
                     width={400}
                     height={400}

@@ -14,7 +14,7 @@ const allProducts = [
     price: 0.99,
     brand: "New Pack",
     category: "pizza-boxes",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Pizza_Box_Mockup_1.jpg?height=400&width=400",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const allProducts = [
     price: 1.5,
     brand: "New Pack",
     category: "pizza-boxes",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Pizza_Box_Mockup_2.jpg?height=400&width=400",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const allProducts = [
     price: 0.25,
     brand: "New Pack",
     category: "accessories",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Pizza_Box_Mockup_3.jpg?height=400&width=400",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const allProducts = [
     price: 3.99,
     brand: "New Pack",
     category: "accessories",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Pizza_Box_Mockup_4.jpg?height=400&width=400",
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const allProducts = [
     price: 89.99,
     brand: "New Pack",
     category: "pizza-boxes",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Pizza_Box_Mockup_5.jpg?height=400&width=400",
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const allProducts = [
     price: 1.75,
     brand: "New Pack",
     category: "pizza-boxes",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Pizza_Box_Mockup_1.jpg?height=400&width=400",
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ const allProducts = [
     price: 1.25,
     brand: "New Pack",
     category: "pizza-boxes",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Pizza_Box_Mockup_1.jpg?height=400&width=400",
   },
   {
     id: 8,
@@ -70,7 +70,7 @@ const allProducts = [
     price: 24.99,
     brand: "New Pack",
     category: "accessories",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Pizza_Box_Mockup_1.jpg?height=400&width=400",
   },
 ]
 
@@ -144,13 +144,13 @@ export default function ShopPage() {
         {/* Filters and Sort */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div className="flex items-center gap-2">
-            <button
+            {/* <button
               className="flex items-center gap-2 border rounded-full px-4 py-2 hover:bg-gray-50 transition-colors"
               onClick={() => document.getElementById("filter-sidebar")?.classList.remove("translate-x-full")}
             >
               <Filter className="w-4 h-4" />
               <span>Filter</span>
-            </button>
+            </button> */}
             <div className="hidden md:flex items-center gap-2">
               <button
                 className={`border rounded-full px-4 py-2 hover:bg-gray-50 transition-colors ${
@@ -195,7 +195,7 @@ export default function ShopPage() {
               <Link href={`/product/${product.name.toLowerCase().replace(/\s+/g, "-")}`} className="block">
                 <div className="aspect-square overflow-hidden bg-[#f5f2ed] rounded-lg mb-3">
                   <Image
-                    src={product.image || "/placeholder.svg"}
+                    src={product.image || "/Pizza_Box_Mockup_1.jpg"}
                     alt={product.name}
                     width={400}
                     height={400}

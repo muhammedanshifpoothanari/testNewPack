@@ -35,11 +35,11 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       Customization: "Available for orders over 500 units",
     },
     images: [
-      "/placeholder.svg?height=600&width=600",
-      "/placeholder.svg?height=600&width=600",
-      "/placeholder.svg?height=600&width=600",
-      "/placeholder.svg?height=600&width=600",
-      "/placeholder.svg?height=600&width=600",
+      "/Pizza_Box_Mockup_1.jpg?height=600&width=600",
+      "/Pizza_Box_Mockup_2.jpg?height=600&width=600",
+      "/Pizza_Box_Mockup_3.jpg?height=600&width=600",
+      "/Pizza_Box_Mockup_4.jpg?height=600&width=600",
+      "/Pizza_Box_Mockup_5.jpg?height=600&width=600",
     ],
     relatedProducts: [
       {
@@ -47,28 +47,28 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         name: "Premium Pizza Box",
         price: 1.5,
         brand: "New Pack",
-        image: "/placeholder.svg?height=280&width=280",
+        image: "/Pizza_Box_Mockup_4.jpg?height=280&width=280",
       },
       {
         id: 2,
         name: "Pizza Box Divider",
         price: 0.25,
         brand: "New Pack",
-        image: "/placeholder.svg?height=280&width=280",
+        image: "/Pizza_Box_Mockup_5.jpg?height=280&width=280",
       },
       {
         id: 3,
         name: "Eco-Friendly Pizza Box",
         price: 1.25,
         brand: "New Pack",
-        image: "/placeholder.svg?height=280&width=280",
+        image: "/Pizza_Box_Mockup_2.jpg?height=280&width=280",
       },
       {
         id: 4,
         name: "Pizza Box Bundle",
         price: 89.99,
         brand: "New Pack",
-        image: "/placeholder.svg?height=280&width=280",
+        image: "/Pizza_Box_Mockup_3.jpg?height=280&width=280",
       },
     ],
   }
@@ -110,7 +110,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                       onClick={() => setActiveImage(index)}
                     >
                       <Image
-                        src={image || "/placeholder.svg"}
+                        src={image || "/Pizza_Box_Mockup_4.jpg"}
                         alt={`${product.name} thumbnail ${index + 1}`}
                         width={64}
                         height={64}
@@ -121,7 +121,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 </div>
                 <div className="flex-1 aspect-square bg-[#f5f2ed] rounded-lg overflow-hidden relative">
                   <Image
-                    src={product.images[activeImage] || "/placeholder.svg"}
+                    src={product.images[activeImage] || "/Pizza_Box_Mockup_4.jpg"}
                     alt={product.name}
                     width={600}
                     height={600}
@@ -177,7 +177,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 className="flex-1 bg-[#c1f467] text-black py-3 rounded-full hover:bg-opacity-90 transition-all"
                 onClick={addToCart}
               >
-                Add to cart
+                Buy Through Waatsaap
               </button>
             </div>
 
@@ -239,7 +239,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   >
                     <div className="aspect-square overflow-hidden bg-[#f5f2ed] rounded-lg mb-3">
                       <Image
-                        src={item.image || "/placeholder.svg"}
+                        src={item.image || "/Pizza_Box_Mockup_4.jpg"}
                         alt={item.name}
                         width={280}
                         height={280}
